@@ -1,0 +1,751 @@
+MCTS context: file=benchmarks/EPFL/adder.aig lib=libs/sky130.genlib lib_file=libs/sky130.lib super=libs/sky130.super
+MCTS start: hot_nodes=1020 region_limit=16 sims_per_region=256 max_region_nodes=40 base_area=     4083.8 delay_bound=15125.31 log_file=mcts_runtime.log
+MCTS region search mode: serial threads=1
+MCTS region 1/16: root=276 level=1 region_nodes=1 decisions=1 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=276 level=1 refs=2 slack=    0.00 combos=3
+      combo 0: area=    7.50 delay=  187.38 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  163.72 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  243.92 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+  region 1 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n276->0
+  region 1 skipped: no improving assignment found
+MCTS region 2/16: root=1220 level=1 region_nodes=1 decisions=1 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1220 level=1 refs=2 slack=    0.00 combos=3
+      combo 0: area=    7.50 delay=  187.38 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  163.72 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  243.92 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+  region 2 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1220->0
+  region 2 skipped: no improving assignment found
+MCTS region 3/16: root=1239 level=246 region_nodes=8 decisions=8 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1239 level=246 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14669.24 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14589.04 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 2: area=    8.75 delay=14627.21 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 3: area=   11.26 delay=14589.04 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 4: area=   11.26 delay=14589.04 prior= 0.20 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 5: area=   11.26 delay=14632.29 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 6: area=   11.26 delay=14640.24 prior= 0.14 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=-/0L
+      combo 7: area=   11.26 delay=14649.98 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+    decision 1: node=1226 level=242 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14417.39 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14454.14 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=14497.59 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14373.94 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   10.01 delay=14382.33 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 5: area=   11.26 delay=14373.94 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14387.78 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   11.26 delay=14417.39 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 2: node=1234 level=244 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14526.49 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14546.95 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14446.29 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=14627.15 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14504.62 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=14534.56 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 6: area=    8.75 delay=14546.95 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 7: area=   10.00 delay=14454.36 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 3: node=1221 level=1 refs=2 slack=14207.90 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 4: node=1227 level=243 refs=3 slack=  533.23 combos=8
+      combo 0: area=    7.50 delay=14454.41 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14462.48 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=    8.75 delay=14482.23 prior= 0.33 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 3: area=   11.26 delay=14418.96 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 4: area=   11.26 delay=14499.16 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 5: area=   12.51 delay=14418.96 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   12.51 delay=14418.96 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=    8.75 delay=14918.20 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 5: node=1238 level=2 refs=2 slack=14638.41 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 6: node=1228 level=1 refs=2 slack=14213.54 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 7: node=1229 level=1 refs=2 slack=14245.77 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 3 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1239->0 n1226->3 n1234->7 n1221->0 n1227->0 n1238->5 n1228->0 n1229->0
+  region 3 skipped: no improving assignment found
+MCTS region 4/16: root=1258 level=250 region_nodes=8 decisions=8 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1258 level=250 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14968.71 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14989.17 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=15069.37 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 3: area=   10.01 delay=14853.45 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 4: area=   11.26 delay=14858.90 prior= 0.20 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 5: area=   10.01 delay=14989.17 prior= 0.17 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14933.26 prior= 0.14 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   11.26 delay=14989.17 prior= 0.12 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 1: node=1242 level=246 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14669.24 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14689.70 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=14749.44 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14609.50 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   10.01 delay=14617.89 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 5: area=   11.26 delay=14609.50 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14623.34 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=14651.03 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__o22a_2/4L
+    decision 2: node=1250 level=248 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14762.05 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14782.51 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14681.85 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=14862.71 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14740.18 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=14770.12 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 6: area=    8.75 delay=14782.51 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 7: area=   10.00 delay=14689.92 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 3: node=1251 level=249 refs=3 slack=   91.01 combos=8
+      combo 0: area=    8.75 delay=14843.88 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 1: area=    8.75 delay=14890.80 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=   10.00 delay=14810.60 prior= 0.33 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=   10.01 delay=14896.63 prior= 0.25 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 4: area=   11.26 delay=14816.43 prior= 0.20 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   12.51 delay=14870.61 prior= 0.17 phase0=sky130_fd_sc_hd__a21o_2/3L phase1=-/0L
+      combo 6: area=    8.75 delay=15248.42 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 7: area=   13.76 delay=14790.41 prior= 0.12 phase0=sky130_fd_sc_hd__a21o_2/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 4: node=1243 level=247 refs=3 slack=  297.67 combos=8
+      combo 0: area=    7.50 delay=14689.97 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14717.79 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=   11.26 delay=14654.52 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 3: area=   11.26 delay=14734.72 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 4: area=   12.51 delay=14654.52 prior= 0.20 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 5: area=    8.75 delay=15161.12 prior= 0.17 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 6: area=    8.75 delay=15241.32 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 7: area=   10.00 delay=15161.12 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 5: node=1237 level=1 refs=2 slack=14443.46 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 6: node=1244 level=1 refs=2 slack=14449.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 7: node=1245 level=1 refs=2 slack=14481.33 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 4 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1258->3 n1242->3 n1250->7 n1251->3 n1243->0 n1237->0 n1244->0 n1245->0
+  region 4 skipped: no improving assignment found
+MCTS region 5/16: root=1266 level=252 region_nodes=7 decisions=7 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1258 level=250 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=15001.85 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=15058.95 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=15082.05 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14853.45 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 4: area=   10.01 delay=14978.75 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   11.26 delay=14972.24 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 6: area=   11.26 delay=14978.75 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 7: area=   11.26 delay=15046.60 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 1: node=1266 level=252 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14997.61 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=15018.07 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14917.41 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=15098.27 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14975.74 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   11.26 delay=15051.98 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   12.51 delay=14985.71 prior= 0.14 phase0=sky130_fd_sc_hd__o2bb2ai_1/4L phase1=-/0L
+      combo 7: area=   11.26 delay=15132.18 prior= 0.12 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+    decision 2: node=1250 level=248 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14762.05 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14782.51 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14681.85 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=14862.71 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14740.18 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=14814.87 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=    8.75 delay=14895.07 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 7: area=   10.00 delay=14814.87 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 3: node=1251 level=249 refs=3 slack=   91.01 combos=8
+      combo 0: area=    8.75 delay=14812.26 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 1: area=    8.75 delay=14843.88 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 2: area=    8.75 delay=14855.35 prior= 0.33 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 3: area=   10.00 delay=14775.15 prior= 0.25 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 4: area=   10.00 delay=14775.15 prior= 0.20 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   10.01 delay=14896.63 prior= 0.17 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 6: area=   11.26 delay=14816.43 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 7: area=   11.26 delay=14816.43 prior= 0.12 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 4: node=1245 level=1 refs=2 slack=14481.33 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 5: node=1260 level=1 refs=2 slack=14664.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 6: node=1253 level=1 refs=2 slack=14679.02 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 5 skipped: no improving assignment found
+MCTS region 6/16: root=264 level=3 region_nodes=2 decisions=2 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=264 level=3 refs=1 slack=    0.00 combos=8
+      combo 0: area=    8.75 delay=  423.95 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 1: area=   11.26 delay=  323.00 prior= 0.50 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=-/0L
+      combo 2: area=   11.26 delay=  414.22 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and3_2/3L
+      combo 3: area=   11.26 delay=  457.04 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 4: area=   12.51 delay=  343.75 prior= 0.20 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   12.51 delay=  450.68 prior= 0.17 phase0=sky130_fd_sc_hd__a21o_2/3L phase1=-/0L
+      combo 6: area=   12.51 delay=  468.03 prior= 0.14 phase0=sky130_fd_sc_hd__or2b_2/2L phase1=-/0L
+      combo 7: area=   13.76 delay=  370.48 prior= 0.12 phase0=sky130_fd_sc_hd__a21o_2/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 1: node=262 level=2 refs=2 slack=14667.39 combos=8
+      combo 0: area=    7.50 delay=  339.66 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  259.46 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 2: area=   11.26 delay=  324.17 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 3: area=   12.51 delay=  259.46 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   16.27 delay=  243.97 prior= 0.14 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+  region 6 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n264->0 n262->4
+  region 6 skipped: no improving assignment found
+MCTS region 7/16: root=1271 level=254 region_nodes=7 decisions=7 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1258 level=250 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14962.88 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14983.34 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=15063.54 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 3: area=   10.01 delay=14853.45 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 4: area=   10.01 delay=14983.34 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   11.26 delay=14933.26 prior= 0.17 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=14960.97 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   11.26 delay=14983.34 prior= 0.12 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 1: node=1266 level=252 refs=1 slack=    0.00 combos=8
+      combo 0: area=    8.75 delay=14975.74 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 1: area=    7.50 delay=15107.04 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 2: area=    8.75 delay=15026.84 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=15235.40 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    7.50 delay=15315.60 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   12.51 delay=14985.71 prior= 0.17 phase0=sky130_fd_sc_hd__o2bb2ai_1/4L phase1=-/0L
+      combo 6: area=   13.76 delay=14905.51 prior= 0.14 phase0=sky130_fd_sc_hd__o2bb2ai_1/4L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 7: area=   11.26 delay=15157.21 prior= 0.12 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+    decision 2: node=1271 level=254 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=15140.36 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=15160.82 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=15060.16 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 3: area=    8.75 delay=15098.33 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 4: area=    7.50 delay=15241.02 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   11.26 delay=15083.23 prior= 0.17 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=-/0L
+      combo 6: area=   12.51 delay=15018.13 prior= 0.14 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 7: area=   11.26 delay=15160.82 prior= 0.12 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 3: node=1270 level=2 refs=2 slack=14622.12 combos=8
+      combo 0: area=    7.50 delay=  360.12 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  343.83 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  424.03 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  279.92 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  343.83 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 4: node=1261 level=1 refs=2 slack=14625.30 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 5: node=1260 level=1 refs=2 slack=14664.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 6: node=1253 level=1 refs=2 slack=14679.02 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 7 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1258->3 n1266->6 n1271->6 n1270->5 n1261->0 n1260->0 n1253->0
+  region 7 skipped: no improving assignment found
+MCTS region 8/16: root=1255 level=250 region_nodes=8 decisions=8 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1255 level=250 refs=1 slack=    0.00 combos=8
+      combo 0: area=    8.75 delay=14862.77 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 1: area=    7.50 delay=14989.17 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=14972.88 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 3: area=   11.26 delay=14885.54 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 4: area=   11.26 delay=14908.97 prior= 0.20 phase0=sky130_fd_sc_hd__or3_2/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   10.01 delay=15053.08 prior= 0.17 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 6: area=   11.26 delay=14954.00 prior= 0.14 phase0=sky130_fd_sc_hd__or3_2/3L phase1=-/0L
+      combo 7: area=   11.26 delay=14972.88 prior= 0.12 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor3_1/3L
+    decision 1: node=1242 level=246 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14669.24 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14689.70 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=14749.44 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14609.50 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   10.01 delay=14617.89 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 5: area=   11.26 delay=14609.50 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14623.34 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=14651.03 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__o22a_2/4L
+    decision 2: node=1250 level=248 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14762.05 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14782.51 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14681.85 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=14862.71 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14740.18 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=14770.12 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 6: area=    8.75 delay=14782.51 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 7: area=   10.00 delay=14689.92 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 3: node=1243 level=247 refs=3 slack=  297.67 combos=8
+      combo 0: area=    7.50 delay=14689.97 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14717.79 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=    8.75 delay=14719.45 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    8.75 delay=14799.65 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 4: area=   10.00 delay=14719.45 prior= 0.20 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   11.26 delay=14654.52 prior= 0.17 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=14734.72 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   12.51 delay=14654.52 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 4: node=1254 level=2 refs=2 slack=14631.61 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 5: node=1237 level=1 refs=2 slack=14443.46 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 6: node=1244 level=1 refs=2 slack=14449.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 7: node=1245 level=1 refs=2 slack=14481.33 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 8 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1255->0 n1242->3 n1250->7 n1243->0 n1254->5 n1237->0 n1244->0 n1245->0
+  region 8 skipped: no improving assignment found
+MCTS region 9/16: root=1256 level=250 region_nodes=8 decisions=8 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1256 level=250 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14968.71 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14860.81 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=   11.26 delay=14888.51 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 3: area=   11.26 delay=14888.51 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 4: area=   11.26 delay=14889.37 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 5: area=   12.51 delay=14809.17 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=14944.25 prior= 0.14 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 7: area=   11.26 delay=14948.00 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+    decision 1: node=1242 level=246 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14669.24 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14689.70 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=14749.44 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14609.50 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   10.01 delay=14617.89 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 5: area=   11.26 delay=14609.50 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14623.34 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=14651.03 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__o22a_2/4L
+    decision 2: node=1250 level=248 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14747.06 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14762.05 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 2: area=    8.75 delay=14681.85 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=14827.26 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14740.18 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=14747.06 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=    8.75 delay=14797.94 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 7: area=   10.00 delay=14717.74 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 3: node=1243 level=247 refs=3 slack=  297.67 combos=8
+      combo 0: area=    7.50 delay=14689.97 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14717.79 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=    8.75 delay=14719.45 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    8.75 delay=14799.65 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 4: area=   10.00 delay=14719.45 prior= 0.20 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   11.26 delay=14654.52 prior= 0.17 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=14734.72 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   12.51 delay=14654.52 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 4: node=1254 level=2 refs=2 slack=14631.61 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 5: node=1237 level=1 refs=2 slack=14443.46 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 6: node=1244 level=1 refs=2 slack=14449.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 7: node=1245 level=1 refs=2 slack=14481.33 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 9 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1256->1 n1242->3 n1250->7 n1243->0 n1254->5 n1237->0 n1244->0 n1245->0
+  region 9 skipped: no improving assignment found
+MCTS region 10/16: root=1240 level=246 region_nodes=8 decisions=8 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1240 level=246 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14689.70 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    8.75 delay=14609.50 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14625.25 prior= 0.33 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 3: area=    8.75 delay=14719.75 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 4: area=   10.00 delay=14639.55 prior= 0.20 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 5: area=   10.01 delay=14673.41 prior= 0.17 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14609.50 prior= 0.14 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 7: area=   10.01 delay=14753.61 prior= 0.12 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+    decision 1: node=1226 level=242 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14417.39 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14454.14 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=14497.59 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14373.94 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   10.01 delay=14382.33 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 5: area=   11.26 delay=14373.94 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14387.78 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   11.26 delay=14417.39 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 2: node=1234 level=244 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14526.49 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14546.95 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    8.75 delay=14446.29 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=14627.15 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=14504.62 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=14534.56 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 6: area=    8.75 delay=14546.95 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 7: area=   10.00 delay=14454.36 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 3: node=1221 level=1 refs=2 slack=14207.90 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 4: node=1227 level=243 refs=3 slack=  533.23 combos=8
+      combo 0: area=    7.50 delay=14454.41 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14462.48 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=    8.75 delay=14467.60 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    8.75 delay=14482.23 prior= 0.25 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 4: area=    8.75 delay=14547.80 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   10.00 delay=14467.60 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 6: area=   10.00 delay=14467.60 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 7: area=   11.26 delay=14418.96 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 5: node=1238 level=2 refs=2 slack=14638.41 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 6: node=1228 level=1 refs=2 slack=14213.54 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 7: node=1229 level=1 refs=2 slack=14245.77 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 10 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1240->0 n1226->3 n1234->7 n1221->0 n1227->0 n1238->5 n1228->0 n1229->0
+  region 10 skipped: no improving assignment found
+MCTS region 11/16: root=279 level=6 region_nodes=10 decisions=10 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=276 level=1 refs=2 slack=    0.00 combos=3
+      combo 0: area=    7.50 delay=  187.38 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  163.72 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  243.92 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+    decision 1: node=279 level=6 refs=1 slack=    0.00 combos=8
+      combo 0: area=    8.75 delay=  493.62 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 1: area=   11.26 delay=  516.39 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 2: area=   11.26 delay=  584.85 prior= 0.33 phase0=sky130_fd_sc_hd__or3_2/3L phase1=-/0L
+      combo 3: area=   11.26 delay=  625.74 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 4: area=   12.51 delay=  504.65 prior= 0.20 phase0=sky130_fd_sc_hd__or3_2/3L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 5: area=   12.51 delay=  611.14 prior= 0.17 phase0=sky130_fd_sc_hd__or2b_2/2L phase1=-/0L
+      combo 6: area=   13.76 delay=  530.94 prior= 0.14 phase0=sky130_fd_sc_hd__or2b_2/2L phase1=sky130_fd_sc_hd__nor3_1/3L
+      combo 7: area=   13.76 delay=  541.69 prior= 0.12 phase0=sky130_fd_sc_hd__a211o_2/4L phase1=-/0L
+    decision 2: node=266 level=2 refs=1 slack=   -0.00 combos=8
+      combo 0: area=    7.50 delay=  259.46 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  279.92 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  339.66 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   11.26 delay=  199.72 prior= 0.25 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   11.26 delay=  215.52 prior= 0.20 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   11.26 delay=  248.74 prior= 0.17 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=-/0L
+      combo 6: area=   11.26 delay=  295.72 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=  259.46 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o211a_1/4L
+    decision 3: node=274 level=4 refs=1 slack=   -0.00 combos=8
+      combo 0: area=    7.50 delay=  388.90 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  392.90 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 2: area=    8.75 delay=  312.70 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=  469.10 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=  371.03 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=  388.90 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=    8.75 delay=  400.97 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 7: area=   10.00 delay=  320.77 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 4: node=267 level=3 refs=3 slack=14666.82 combos=8
+      combo 0: area=    7.50 delay=  320.82 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=  308.01 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=   11.26 delay=  256.37 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 3: area=   11.26 delay=  296.36 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 4: area=   11.26 delay=  317.19 prior= 0.20 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 5: area=   11.26 delay=  336.57 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=  376.56 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 7: area=   12.51 delay=  256.37 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 5: node=261 level=1 refs=2 slack=   74.31 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 6: node=278 level=2 refs=2 slack=14638.41 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 7: node=268 level=1 refs=2 slack=   79.95 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 8: node=269 level=1 refs=2 slack=  133.19 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 9: node=277 level=1 refs=2 slack=  309.87 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+  region 11 sim 1 best update: value=    0.01 area=     4083.8 delay=15125.31 choices: n276->0 n279->0 n266->3 n274->7 n267->0 n261->0 n278->5 n268->0 n269->0 n277->0
+  region 11 candidate: value=    0.01 area=     4083.8 delay=15125.31 choices: n276->0 n279->0 n266->3 n274->7 n267->0 n261->0 n278->5 n268->0 n269->0 n277->0
+MCTS region 12/16: root=280 level=6 region_nodes=10 decisions=10 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=276 level=1 refs=2 slack=    0.00 combos=3
+      combo 0: area=    7.50 delay=  187.38 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  163.72 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  243.92 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+    decision 1: node=280 level=6 refs=1 slack=    0.00 combos=8
+      combo 0: area=    8.75 delay=  582.58 prior= 1.00 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 1: area=   11.26 delay=  521.55 prior= 0.50 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=-/0L
+      combo 2: area=   11.26 delay=  600.36 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 3: area=   11.26 delay=  611.14 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 4: area=   11.26 delay=  616.92 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__nor3b_1/3L
+      combo 5: area=   12.51 delay=  520.16 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 6: area=   12.51 delay=  530.94 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   12.51 delay=  536.72 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor3b_1/3L
+    decision 2: node=266 level=2 refs=1 slack=   -0.00 combos=8
+      combo 0: area=    7.50 delay=  259.46 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  279.92 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  339.66 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   11.26 delay=  199.72 prior= 0.25 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   11.26 delay=  215.52 prior= 0.20 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   11.26 delay=  248.74 prior= 0.17 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=-/0L
+      combo 6: area=   11.26 delay=  295.72 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=  259.46 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o211a_1/4L
+    decision 3: node=274 level=4 refs=1 slack=   -0.00 combos=8
+      combo 0: area=    7.50 delay=  479.82 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  483.82 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 2: area=    8.75 delay=  403.62 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    7.50 delay=  560.02 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=    8.75 delay=  461.95 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=    8.75 delay=  479.82 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=    8.75 delay=  491.89 prior= 0.14 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 7: area=   10.00 delay=  411.69 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+    decision 4: node=267 level=3 refs=3 slack=14666.82 combos=8
+      combo 0: area=    7.50 delay=  411.74 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=  308.01 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=   11.26 delay=  331.54 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 3: area=   11.26 delay=  331.54 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 4: area=   11.26 delay=  336.57 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 5: area=   12.51 delay=  256.37 prior= 0.17 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=  387.28 prior= 0.14 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 7: area=   11.26 delay=  397.39 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__a21boi_0/3L
+    decision 5: node=261 level=1 refs=2 slack=   74.31 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 6: node=278 level=2 refs=2 slack=14638.41 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 7: node=268 level=1 refs=2 slack=   79.95 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 8: node=269 level=1 refs=2 slack=  133.19 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 9: node=277 level=1 refs=2 slack=  309.87 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+  region 12 sim 1 best update: value=    0.01 area=     4083.8 delay=15125.31 choices: n276->0 n280->0 n266->3 n274->7 n267->0 n261->0 n278->5 n268->0 n269->0 n277->0
+  region 12 candidate: value=    0.01 area=     4083.8 delay=15125.31 choices: n276->0 n280->0 n266->3 n274->7 n267->0 n261->0 n278->5 n268->0 n269->0 n277->0
+MCTS region 13/16: root=263 level=3 region_nodes=2 decisions=2 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=263 level=3 refs=1 slack=    0.00 combos=8
+      combo 0: area=    8.75 delay=  389.87 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 1: area=    8.75 delay=  403.94 prior= 0.50 phase0=sky130_fd_sc_hd__nand3_1/3L phase1=-/0L
+      combo 2: area=   10.00 delay=  323.74 prior= 0.33 phase0=sky130_fd_sc_hd__nand3_1/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=   11.26 delay=  466.89 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__and3_2/3L
+      combo 4: area=   11.26 delay=  482.42 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 5: area=   12.51 delay=  386.69 prior= 0.17 phase0=sky130_fd_sc_hd__nand3_1/3L phase1=sky130_fd_sc_hd__and3_2/3L
+      combo 6: area=   12.51 delay=  402.22 prior= 0.14 phase0=sky130_fd_sc_hd__nand3_1/3L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 7: area=   12.51 delay=  413.02 prior= 0.12 phase0=sky130_fd_sc_hd__a21o_2/3L phase1=-/0L
+    decision 1: node=262 level=2 refs=2 slack=14667.39 combos=8
+      combo 0: area=    7.50 delay=  339.66 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  259.46 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 2: area=   11.26 delay=  324.17 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 3: area=   12.51 delay=  259.46 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   16.27 delay=  243.97 prior= 0.14 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__lpflow_inputiso0p_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+  region 13 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n263->3 n262->4
+  region 13 skipped: no improving assignment found
+MCTS region 14/16: root=266 level=2 region_nodes=3 decisions=3 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=266 level=2 refs=1 slack=   -0.00 combos=8
+      combo 0: area=    7.50 delay=  259.46 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  279.92 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  339.66 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   11.26 delay=  199.72 prior= 0.25 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   11.26 delay=  215.52 prior= 0.20 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 5: area=   11.26 delay=  248.74 prior= 0.17 phase0=sky130_fd_sc_hd__o211ai_1/4L phase1=-/0L
+      combo 6: area=   11.26 delay=  295.72 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=  259.46 prior= 0.12 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o211a_1/4L
+    decision 1: node=260 level=1 refs=2 slack=    0.00 combos=3
+      combo 0: area=    7.50 delay=  187.38 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  163.72 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  243.92 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+    decision 2: node=259 level=1 refs=3 slack=14798.04 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+  region 14 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n266->3 n260->0 n259->0
+  region 14 skipped: no improving assignment found
+MCTS region 15/16: root=1264 level=252 region_nodes=7 decisions=7 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1258 level=250 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14968.71 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=14989.17 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=15069.37 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 3: area=   10.01 delay=14853.45 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 4: area=   11.26 delay=14858.90 prior= 0.20 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 5: area=   10.01 delay=14989.17 prior= 0.17 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14933.26 prior= 0.14 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   11.26 delay=14989.17 prior= 0.12 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 1: node=1264 level=252 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14997.61 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=14917.41 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 2: area=   11.26 delay=14951.13 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 3: area=   11.26 delay=14973.15 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 4: area=   11.26 delay=14979.13 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 5: area=   11.26 delay=15023.05 prior= 0.17 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=-/0L
+      combo 6: area=   11.26 delay=15031.33 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 7: area=   11.26 delay=15053.35 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 2: node=1262 level=2 refs=2 slack=14625.30 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 3: node=1259 level=251 refs=3 slack=   62.11 combos=8
+      combo 0: area=    7.50 delay=14925.53 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=14890.08 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 2: area=   11.26 delay=14970.28 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 3: area=    8.75 delay=15404.04 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 4: area=    8.75 delay=15484.24 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   13.76 delay=15041.70 prior= 0.17 phase0=sky130_fd_sc_hd__a21bo_2/3L phase1=-/0L
+      combo 6: area=   13.76 delay=15132.45 prior= 0.14 phase0=sky130_fd_sc_hd__maj3_1/3L phase1=-/0L
+      combo 7: area=   17.52 delay=14961.50 prior= 0.12 phase0=sky130_fd_sc_hd__a21bo_2/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 4: node=1261 level=1 refs=2 slack=14625.30 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 5: node=1260 level=1 refs=2 slack=14664.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 6: node=1253 level=1 refs=2 slack=14679.02 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 15 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1258->3 n1264->0 n1262->0 n1259->0 n1261->0 n1260->0 n1253->0
+  region 15 skipped: no improving assignment found
+MCTS region 16/16: root=1248 level=248 region_nodes=7 decisions=7 base_area=     4083.8 delay_bound=15125.31
+    decision 0: node=1248 level=248 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14762.05 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=14681.85 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 2: area=   11.26 delay=14715.57 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 3: area=   11.26 delay=14737.59 prior= 0.25 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 4: area=   11.26 delay=14743.57 prior= 0.20 phase0=-/0L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 5: area=   11.26 delay=14787.49 prior= 0.17 phase0=sky130_fd_sc_hd__nand3b_1/3L phase1=-/0L
+      combo 6: area=   11.26 delay=14795.77 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__a211oi_1/4L
+      combo 7: area=   11.26 delay=14817.79 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 1: node=1242 level=246 refs=1 slack=    0.00 combos=8
+      combo 0: area=    7.50 delay=14669.24 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=14689.70 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=14749.44 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 3: area=   10.01 delay=14609.50 prior= 0.25 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   10.01 delay=14617.89 prior= 0.20 phase0=sky130_fd_sc_hd__o22ai_1/4L phase1=-/0L
+      combo 5: area=   11.26 delay=14609.50 prior= 0.17 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 6: area=   11.26 delay=14623.34 prior= 0.14 phase0=sky130_fd_sc_hd__o21bai_1/3L phase1=-/0L
+      combo 7: area=   13.76 delay=14651.03 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__o22a_2/4L
+    decision 2: node=1246 level=2 refs=2 slack=14625.30 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 3: node=1243 level=247 refs=3 slack=  297.67 combos=8
+      combo 0: area=    7.50 delay=14689.97 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    8.75 delay=14717.79 prior= 0.50 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=-/0L
+      combo 2: area=    8.75 delay=14719.45 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 3: area=    8.75 delay=14799.65 prior= 0.25 phase0=-/0L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 4: area=   10.00 delay=14719.45 prior= 0.20 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__a21oi_1/3L
+      combo 5: area=   11.26 delay=14654.52 prior= 0.17 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 6: area=   11.26 delay=14734.72 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   12.51 delay=14654.52 prior= 0.12 phase0=sky130_fd_sc_hd__o21ai_0/3L phase1=sky130_fd_sc_hd__o21a_1/3L
+    decision 4: node=1237 level=1 refs=2 slack=14443.46 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+    decision 5: node=1244 level=1 refs=2 slack=14449.10 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 6: node=1245 level=1 refs=2 slack=14481.33 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  267.58 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+  region 16 sim 1 best update: value=    0.00 area=     4083.8 delay=15125.31 choices: n1248->0 n1242->3 n1246->0 n1243->0 n1237->0 n1244->0 n1245->0
+  region 16 skipped: no improving assignment found
+  region 11 accepted: area      4083.8 ->      4083.8  delay=15125.31
+  region 12 rejected after replay: area=     4083.8 delay=15125.31 (base_area=     4083.8 bound=15125.31)
+MCTS summary: accepted=1 runtime=     1.92 sec final_area=     4083.8 final_delay=15125.31
+fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__a21boi_0/3L
+      combo 5: area=   11.26 delay=14510.15 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 6: area=   11.26 delay=14510.79 prior= 0.14 phase0=-/0L phase1=sky130_fd_sc_hd__o21a_1/3L
+      combo 7: area=   11.26 delay=14530.98 prior= 0.12 phase0=-/0L phase1=sky130_fd_sc_hd__a21boi_0/3L
+    decision 3: node=1221 level=1 refs=2 slack=14207.90 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+    decision 4: node=1230 level=2 refs=2 slack=14625.30 combos=8
+      combo 0: area=    7.50 delay=  333.36 prior= 1.00 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=   10.01 delay=  317.07 prior= 0.50 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=   10.01 delay=  397.27 prior= 0.33 phase0=sky130_fd_sc_hd__or2_2/2L phase1=-/0L
+      combo 3: area=   12.51 delay=  253.16 prior= 0.25 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 4: area=   12.51 delay=  320.25 prior= 0.20 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=-/0L
+      combo 5: area=   12.51 delay=  327.05 prior= 0.17 phase0=-/0L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 6: area=   15.02 delay=  317.07 prior= 0.14 phase0=sky130_fd_sc_hd__or2_2/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+      combo 7: area=   17.52 delay=  246.85 prior= 0.12 phase0=sky130_fd_sc_hd__xnor2_1/2L phase1=sky130_fd_sc_hd__xor2_1/2L
+    decision 5: node=1228 level=1 refs=2 slack=14213.54 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 1: area=    7.50 delay=  187.38 prior= 0.50 phase0=-/0L phase1=sky130_fd_sc_hd__nor2_1/2L
+      combo 2: area=    7.50 delay=  240.82 prior= 0.33 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+    decision 6: node=1229 level=1 refs=2 slack=14245.77 combos=3
+      combo 0: area=    7.50 delay=  160.62 prior= 1.00 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=-/0L
+      combo 1: area=   11.26 delay=  139.61 prior= 0.50 phase0=sky130_fd_sc_hd__nand2_1/2L phase1=sky130_fd_sc_hd__and2_2/2L
+      combo 2: area=   11.26 delay=  219.81 prior= 0.33 phase0=-/0L phase1=sky130_fd_sc_hd__and2_2/2L
+  region 16 sim 1 best update: value=    0.00 area=     4081.3 delay=15125.31 choices: n1232->0 n1226->3 n1227->0 n1221->0 n1230->0 n1228->0 n1229->0
+  region 16 skipped: no improving assignment found
+  region 10 accepted: area      4081.3 ->      4081.3  delay=15125.31
+  region 11 rejected after replay: area=     4081.3 delay=15125.31 (base_area=     4081.3 bound=15125.31)
+MCTS summary: accepted=1 runtime=     2.16 sec final_area=     4081.3 final_delay=15125.31

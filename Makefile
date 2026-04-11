@@ -113,6 +113,13 @@ ifndef ABC_USE_NO_PTHREADS
   $(call abc_info,$(MSG_PREFIX)Using pthreads)
 endif
 
+# whether to compile with OpenMP support
+ifndef ABC_USE_NO_OPENMP
+  CFLAGS += -DABC_USE_OPENMP -fopenmp
+  LIBS += -fopenmp
+  $(call abc_info,$(MSG_PREFIX)Using OpenMP)
+endif
+
 # whether to compile into position independent code
 ifdef ABC_USE_PIC
   CFLAGS += -fPIC

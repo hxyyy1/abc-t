@@ -21,6 +21,10 @@
 
 ABC_NAMESPACE_IMPL_START
 
+static inline const char * Map_MappingLogStr( const char * pStr )
+{
+    return pStr ? pStr : "<unknown>";
+}
 
 ////////////////////////////////////////////////////////////////////////
 ///                        DECLARATIONS                              ///
@@ -53,6 +57,7 @@ int Map_Mapping( Map_Man_t * p )
     int fUseAreaFlow           = 1;
     int fUseExactArea          = !p->fSwitching;
     int fUseExactAreaWithPhase = !p->fSwitching;
+    int nMctsAccepted;
     abctime clk;
 
     //////////////////////////////////////////////////////////////////////
@@ -72,6 +77,16 @@ int Map_Mapping( Map_Man_t * p )
     p->timeTruth = Abc_Clock() - clk;
     //////////////////////////////////////////////////////////////////////
 //ABC_PRT( "Truths", Abc_Clock() - clk );
+
+    //////////////////////////////////////////////////////////////////////
+    if ( p->fVerbose )
+    {
+        Mio_Library_t * pLib = p->pSuperLib ? p->pSuperLib->pGenlib : NULL;
+        printf( "Context  : File = %s  Lib = %s (%s)\n",
+            Map_MappingLogStr(p->pFileName),
+            Map_MappingLogStr(pLib ? Mio_LibraryReadName(pLib) : NULL),
+            Map_MappingLogStr(pLib ? Mio_LibraryReadFileName(pLib) : NULL) );
+    }
 
     //////////////////////////////////////////////////////////////////////
     // compute the minimum-delay mapping
@@ -95,6 +110,23 @@ ABC_PRT( "Time", p->timeMatch );
 
     if ( !p->fAreaRecovery )
     {
+        if ( p->fMctsEnable )
+        {
+            clk = Abc_Clock();
+            Map_TimeComputeRequiredGlobal( p );
+            nMctsAccepted = Map_MappingMctsRefine( p );
+            Map_MappingSetRefs( p );
+            p->AreaFinal = Map_MappingGetArea( p );
+            if ( p->fVerbose )
+            {
+printf( "MCTS     : %s = %8.2f  Flow = %11.1f  Area = %11.1f  %4.1f %%  Acc = %3d   ",
+                    fShowSwitching? "Switch" : "Delay",
+                    fShowSwitching? Map_MappingGetSwitching(p) : p->fRequiredGlo,
+                    0.0, p->AreaFinal,
+                    100.0*(p->AreaBase-p->AreaFinal)/p->AreaBase, nMctsAccepted );
+ABC_PRT( "Time", Abc_Clock() - clk );
+            }
+        }
         if ( p->fVerbose )
             Map_MappingPrintOutputArrivals( p );
         return 1;
@@ -124,6 +156,28 @@ ABC_PRT( "Time", Abc_Clock() - clk );
 }
     }
     p->timeArea += Abc_Clock() - clk;
+    //////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////
+    // perform local MCTS-based refinement after area-flow recovery
+    if ( p->fMctsEnable && p->fMctsEarly )
+    {
+        clk = Abc_Clock();
+        Map_TimeComputeRequiredGlobal( p );
+        nMctsAccepted = Map_MappingMctsRefine( p );
+        Map_MappingSetRefs( p );
+        p->AreaFinal = Map_MappingGetArea( p );
+        if ( p->fVerbose )
+        {
+printf( "MCTS     : %s = %8.2f  Flow = %11.1f  Area = %11.1f  %4.1f %%  Acc = %3d   ",
+                    fShowSwitching? "Switch" : "Delay",
+                    fShowSwitching? Map_MappingGetSwitching(p) : p->fRequiredGlo,
+                    0.0, p->AreaFinal,
+                    100.0*(p->AreaBase-p->AreaFinal)/p->AreaBase, nMctsAccepted );
+ABC_PRT( "Time", Abc_Clock() - clk );
+        }
+        p->timeArea += Abc_Clock() - clk;
+    }
     //////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////
@@ -179,6 +233,28 @@ ABC_PRT( "Time", Abc_Clock() - clk );
     //////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////
+    // perform local MCTS-based refinement after exact-area recovery
+    if ( p->fMctsEnable && p->fMctsLate )
+    {
+        clk = Abc_Clock();
+        Map_TimeComputeRequiredGlobal( p );
+        nMctsAccepted = Map_MappingMctsRefine( p );
+        Map_MappingSetRefs( p );
+        p->AreaFinal = Map_MappingGetArea( p );
+        if ( p->fVerbose )
+        {
+printf( "MCTS(end): %s = %8.2f  Flow = %11.1f  Area = %11.1f  %4.1f %%  Acc = %3d   ",
+                    fShowSwitching? "Switch" : "Delay",
+                    fShowSwitching? Map_MappingGetSwitching(p) : p->fRequiredGlo,
+                    0.0, p->AreaFinal,
+                    100.0*(p->AreaBase-p->AreaFinal)/p->AreaBase, nMctsAccepted );
+ABC_PRT( "Time", Abc_Clock() - clk );
+        }
+        p->timeArea += Abc_Clock() - clk;
+    }
+    //////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////
     // perform area recovery using exact area
     clk = Abc_Clock();
     if ( p->fSwitching )
@@ -228,4 +304,3 @@ ABC_PRT( "Time", Abc_Clock() - clk );
     return 1;
 }
 ABC_NAMESPACE_IMPL_END
-

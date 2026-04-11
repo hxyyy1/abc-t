@@ -59,7 +59,7 @@ static Abc_Obj_t *  Abc_NodeFromMapSuperChoice_rec( Abc_Ntk_t * pNtkNew, Map_Sup
   SeeAlso     []
 
 ***********************************************************************/
-Abc_Ntk_t * Abc_NtkMap( Abc_Ntk_t * pNtk, Mio_Library_t* userLib, double DelayTarget, double AreaMulti, double DelayMulti, float LogFan, float Slew, float Gain, int nGatesMin, int fRecovery, int fSwitching, int fSkipFanout, int fUseProfile, int fUseBuffs, int fVerbose )
+Abc_Ntk_t * Abc_NtkMap( Abc_Ntk_t * pNtk, Mio_Library_t* userLib, double DelayTarget, double AreaMulti, double DelayMulti, float LogFan, float Slew, float Gain, int nGatesMin, int fRecovery, int fSwitching, int fSkipFanout, int fUseProfile, int fUseBuffs, int fVerbose, int fMctsEarly, int fMctsLate, int fMctsParallel, int nMctsSims, int nMctsRegions, int nMctsRegionMax )
 {
     static int fUseMulti = 0;
     int fShowSwitching = 1;
@@ -151,6 +151,13 @@ clk = Abc_Clock();
     Map_ManSetSkipFanout( pMan, fSkipFanout );
     if ( fUseProfile )
         Map_ManSetUseProfile( pMan );
+    Map_ManSetMctsEnable( pMan, fMctsEarly || fMctsLate );
+    Map_ManSetMctsEarly( pMan, fMctsEarly );
+    Map_ManSetMctsLate( pMan, fMctsLate );
+    Map_ManSetMctsParallel( pMan, fMctsParallel );
+    Map_ManSetMctsSimNum( pMan, nMctsSims );
+    Map_ManSetMctsRegionNum( pMan, nMctsRegions );
+    Map_ManSetMctsRegionMax( pMan, nMctsRegionMax );
     if ( LogFan != 0 )
         Map_ManCreateNodeDelays( pMan, LogFan );
     if ( !Map_Mapping( pMan ) )
@@ -279,6 +286,7 @@ Map_Man_t * Abc_NtkToMap( Abc_Ntk_t * pNtk, double DelayTarget, int fRecovery, f
     if ( pMan == NULL )
         return NULL;
     Map_ManSetAreaRecovery( pMan, fRecovery );
+    Map_ManSetFileName( pMan, pNtk->pSpec ? pNtk->pSpec : pNtk->pName );
     Map_ManSetOutputNames( pMan, Abc_NtkCollectCioNames(pNtk, 1) );
     Map_ManSetDelayTarget( pMan, (float)DelayTarget );
     Map_ManCreateAigIds( pMan, Abc_NtkObjNumMax(pNtk) );
@@ -1238,4 +1246,3 @@ void Abc_NtkSetAndGateDelay( Abc_Frame_t * pAbc, float Delay )
 
 
 ABC_NAMESPACE_IMPL_END
-

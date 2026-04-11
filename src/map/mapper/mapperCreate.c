@@ -60,6 +60,7 @@ Mio_Library_t * Map_ManReadGenLib ( Map_Man_t * p )                     { return
 int             Map_ManReadVerbose( Map_Man_t * p )                     { return p->fVerbose;   }
 float           Map_ManReadAreaFinal( Map_Man_t * p )                   { return p->AreaFinal;  }
 float           Map_ManReadRequiredGlo( Map_Man_t * p )                 { return p->fRequiredGlo; }
+void            Map_ManSetFileName( Map_Man_t * p, char * pFileName )   { p->pFileName = pFileName; }
 void            Map_ManSetOutputNames( Map_Man_t * p, char ** ppNames ) { p->ppOutputNames = ppNames;}
 void            Map_ManSetAreaRecovery( Map_Man_t * p, int fAreaRecovery ) { p->fAreaRecovery = fAreaRecovery;}
 void            Map_ManSetDelayTarget( Map_Man_t * p, float DelayTarget ) { p->DelayTarget = DelayTarget;}
@@ -75,6 +76,13 @@ void            Map_ManSetVerbose( Map_Man_t * p, int fVerbose )           { p->
 void            Map_ManSetSwitching( Map_Man_t * p, int fSwitching )       { p->fSwitching = fSwitching; }   
 void            Map_ManSetSkipFanout( Map_Man_t * p, int fSkipFanout )     { p->fSkipFanout = fSkipFanout; }   
 void            Map_ManSetUseProfile( Map_Man_t * p )                      { p->fUseProfile = 1;         }   
+void            Map_ManSetMctsEnable( Map_Man_t * p, int fEnable )         { p->fMctsEnable = fEnable;   }
+void            Map_ManSetMctsEarly( Map_Man_t * p, int fEnable )          { p->fMctsEarly = fEnable;    }
+void            Map_ManSetMctsLate( Map_Man_t * p, int fEnable )           { p->fMctsLate = fEnable;     }
+void            Map_ManSetMctsParallel( Map_Man_t * p, int fEnable )       { p->fMctsParallel = fEnable; }
+void            Map_ManSetMctsSimNum( Map_Man_t * p, int nSims )           { p->nMctsSimNum = nSims;     }
+void            Map_ManSetMctsRegionNum( Map_Man_t * p, int nRegions )     { p->nMctsRegionNum = nRegions; }
+void            Map_ManSetMctsRegionMax( Map_Man_t * p, int nRegionMax )   { p->nMctsRegionMax = nRegionMax; }
 void            Map_ManCreateAigIds( Map_Man_t * p, int nObjs )            { p->pAigNodeIDs = ABC_CALLOC( int, nObjs ); }   
 
 /**Function*************************************************************
@@ -208,6 +216,12 @@ Map_Man_t * Map_ManCreate( int nInputs, int nOutputs, int fVerbose )
     p->nVarsMax  = p->pSuperLib->nVarsMax;
     p->fVerbose  = fVerbose;
     p->fEpsilon  = (float)0.001;
+    p->fMctsEarly = 1;
+    p->fMctsLate = 0;
+    p->fMctsParallel = 1;
+    p->nMctsSimNum = 256;
+    p->nMctsRegionNum = 16;
+    p->nMctsRegionMax = 40;
     assert( p->nVarsMax > 0 );
 
     if ( p->nVarsMax == 5 )
@@ -591,4 +605,3 @@ void Map_NodeSetChoice( Map_Man_t * pMan, Map_Node_t * pNodeOld, Map_Node_t * pN
 ////////////////////////////////////////////////////////////////////////
 
 ABC_NAMESPACE_IMPL_END
-

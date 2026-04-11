@@ -20822,8 +20822,17 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
     int fUseProfile;
     int fUseBuffs;
     int fVerbose;
+    int fMcts;
+    int fMctsLateOnly;
+    int fMctsDual;
+    int fMctsEarly;
+    int fMctsLate;
+    int fMctsParallel;
+    int nMctsSims;
+    int nMctsRegions;
+    int nMctsRegionMax;
     int c;
-    extern Abc_Ntk_t * Abc_NtkMap( Abc_Ntk_t * pNtk, Mio_Library_t* userLib, double DelayTarget, double AreaMulti, double DelayMulti, float LogFan, float Slew, float Gain, int nGatesMin, int fRecovery, int fSwitching, int fSkipFanout, int fUseProfile, int fUseBuffs, int fVerbose );
+    extern Abc_Ntk_t * Abc_NtkMap( Abc_Ntk_t * pNtk, Mio_Library_t* userLib, double DelayTarget, double AreaMulti, double DelayMulti, float LogFan, float Slew, float Gain, int nGatesMin, int fRecovery, int fSwitching, int fSkipFanout, int fUseProfile, int fUseBuffs, int fVerbose, int fMctsEarly, int fMctsLate, int fMctsParallel, int nMctsSims, int nMctsRegions, int nMctsRegionMax );
     extern int Abc_NtkFraigSweep( Abc_Ntk_t * pNtk, int fUseInv, int fExdc, int fVerbose, int fVeryVerbose );
 
     pNtk = Abc_FrameReadNtk(pAbc);
@@ -20839,8 +20848,15 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
     fUseProfile = 0;
     fUseBuffs   = 0;
     fVerbose    = 0;
+    fMcts       = 0;
+    fMctsLateOnly = 0;
+    fMctsDual = 0;
+    fMctsParallel = 1;
+    nMctsSims   = 256;
+    nMctsRegions = 16;
+    nMctsRegionMax = 40;
     Extra_UtilGetoptReset();
-    while ( ( c = Extra_UtilGetopt( argc, argv, "DABFSGMarspfuovh" ) ) != EOF )
+    while ( ( c = Extra_UtilGetopt( argc, argv, "DABFSGMJLKarspfuoPvjxyh" ) ) != EOF )
     {
         switch ( c )
         {
@@ -20917,6 +20933,39 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
             if ( nGatesMin < 0 )
                 goto usage;
             break;
+        case 'J':
+            if ( globalUtilOptind >= argc )
+            {
+                Abc_Print( -1, "Command line switch \"-J\" should be followed by a positive integer.\n" );
+                goto usage;
+            }
+            nMctsSims = atoi(argv[globalUtilOptind]);
+            globalUtilOptind++;
+            if ( nMctsSims <= 0 )
+                goto usage;
+            break;
+        case 'K':
+            if ( globalUtilOptind >= argc )
+            {
+                Abc_Print( -1, "Command line switch \"-K\" should be followed by a positive integer.\n" );
+                goto usage;
+            }
+            nMctsRegions = atoi(argv[globalUtilOptind]);
+            globalUtilOptind++;
+            if ( nMctsRegions <= 0 )
+                goto usage;
+            break;
+        case 'L':
+            if ( globalUtilOptind >= argc )
+            {
+                Abc_Print( -1, "Command line switch \"-L\" should be followed by a positive integer.\n" );
+                goto usage;
+            }
+            nMctsRegionMax = atoi(argv[globalUtilOptind]);
+            globalUtilOptind++;
+            if ( nMctsRegionMax <= 0 )
+                goto usage;
+            break;
         case 'a':
             fAreaOnly ^= 1;
             break;
@@ -20938,6 +20987,18 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
         case 'o':
             fUseBuffs ^= 1;
             break;
+        case 'P':
+            fMctsParallel ^= 1;
+            break;
+        case 'j':
+            fMcts ^= 1;
+            break;
+        case 'x':
+            fMctsLateOnly ^= 1;
+            break;
+        case 'y':
+            fMctsDual ^= 1;
+            break;
         case 'v':
             fVerbose ^= 1;
             break;
@@ -20957,6 +21018,22 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
     if ( fAreaOnly )
         DelayTarget = ABC_INFINITY;
 
+    if ( fMctsDual )
+    {
+        fMctsEarly = fMcts;
+        fMctsLate = fMcts;
+    }
+    else if ( fMctsLateOnly )
+    {
+        fMctsEarly = 0;
+        fMctsLate = fMcts;
+    }
+    else
+    {
+        fMctsEarly = fMcts;
+        fMctsLate = 0;
+    }
+
     if ( !Abc_NtkIsStrash(pNtk) )
     {
         pNtk = Abc_NtkStrash( pNtk, 0, 0, 0 );
@@ -20974,7 +21051,7 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
         }
         Abc_Print( 0, "The network was strashed and balanced before mapping.\n" );
         // get the new network
-        pNtkRes = Abc_NtkMap( pNtk, /*userLib=*/NULL, DelayTarget, AreaMulti, DelayMulti, LogFan, Slew, Gain, nGatesMin, fRecovery, fSwitching, fSkipFanout, fUseProfile, fUseBuffs, fVerbose );
+        pNtkRes = Abc_NtkMap( pNtk, /*userLib=*/NULL, DelayTarget, AreaMulti, DelayMulti, LogFan, Slew, Gain, nGatesMin, fRecovery, fSwitching, fSkipFanout, fUseProfile, fUseBuffs, fVerbose, fMctsEarly, fMctsLate, fMctsParallel, nMctsSims, nMctsRegions, nMctsRegionMax );
         if ( pNtkRes == NULL )
         {
             Abc_NtkDelete( pNtk );
@@ -20986,7 +21063,7 @@ int Abc_CommandMap( Abc_Frame_t * pAbc, int argc, char ** argv )
     else
     {
         // get the new network
-        pNtkRes = Abc_NtkMap( pNtk, /*userLib=*/NULL, DelayTarget, AreaMulti, DelayMulti, LogFan, Slew, Gain, nGatesMin, fRecovery, fSwitching, fSkipFanout, fUseProfile, fUseBuffs, fVerbose );
+        pNtkRes = Abc_NtkMap( pNtk, /*userLib=*/NULL, DelayTarget, AreaMulti, DelayMulti, LogFan, Slew, Gain, nGatesMin, fRecovery, fSwitching, fSkipFanout, fUseProfile, fUseBuffs, fVerbose, fMctsEarly, fMctsLate, fMctsParallel, nMctsSims, nMctsRegions, nMctsRegionMax );
         if ( pNtkRes == NULL )
         {
             Abc_Print( -1, "Mapping has failed.\n" );
@@ -21013,7 +21090,7 @@ usage:
         sprintf(Buffer, "not used" );
     else
         sprintf(Buffer, "%.3f", DelayTarget );
-    Abc_Print( -2, "usage: map [-DABFSG float] [-M num] [-arspfuovh]\n" );
+    Abc_Print( -2, "usage: map [-DABFSG float] [-MJLK num] [-arspfuoPvjxyh]\n" );
     Abc_Print( -2, "\t           performs standard cell mapping of the current network\n" );
     Abc_Print( -2, "\t-D float : sets the global required times [default = %s]\n", Buffer );
     Abc_Print( -2, "\t-A float : \"area multiplier\" to bias gate selection [default = %.2f]\n", AreaMulti );
@@ -21022,6 +21099,9 @@ usage:
     Abc_Print( -2, "\t-S float : the slew parameter used to generate the library [default = %.2f]\n", Slew );
     Abc_Print( -2, "\t-G float : the gain parameter used to generate the library [default = %.2f]\n", Gain );
     Abc_Print( -2, "\t-M num   : skip gate classes whose size is less than this [default = %d]\n", nGatesMin );
+    Abc_Print( -2, "\t-J num   : MCTS simulations per hotspot region [default = %d]\n", nMctsSims );
+    Abc_Print( -2, "\t-K num   : number of hotspot regions for MCTS [default = %d]\n", nMctsRegions );
+    Abc_Print( -2, "\t-L num   : maximum nodes collected per hotspot region [default = %d]\n", nMctsRegionMax );
     Abc_Print( -2, "\t-a       : toggles area-only mapping [default = %s]\n", fAreaOnly? "yes": "no" );
     Abc_Print( -2, "\t-r       : toggles area recovery [default = %s]\n", fRecovery? "yes": "no" );
     Abc_Print( -2, "\t-s       : toggles sweep after mapping [default = %s]\n", fSweep? "yes": "no" );
@@ -21029,6 +21109,10 @@ usage:
     Abc_Print( -2, "\t-f       : do not use large gates to map high-fanout nodes [default = %s]\n", fSkipFanout? "yes": "no" );
     Abc_Print( -2, "\t-u       : use standard-cell profile [default = %s]\n", fUseProfile? "yes": "no" );
     Abc_Print( -2, "\t-o       : toggles using buffers to decouple combinational outputs [default = %s]\n", fUseBuffs? "yes": "no" );
+    Abc_Print( -2, "\t-j       : enables local MCTS refinement after area-flow [default = %s]\n", fMcts? "yes": "no" );
+    Abc_Print( -2, "\t-P       : toggles parallel MCTS region search [default = %s]\n", fMctsParallel? "yes": "no" );
+    Abc_Print( -2, "\t-x       : move MCTS to run only after exact-area recovery [default = %s]\n", fMctsLateOnly? "yes": "no" );
+    Abc_Print( -2, "\t-y       : run MCTS both after area-flow and after exact-area recovery [default = %s]\n", fMctsDual? "yes": "no" );
     Abc_Print( -2, "\t-v       : toggles verbose output [default = %s]\n", fVerbose? "yes": "no" );
     Abc_Print( -2, "\t-h       : print the command usage\n");
     return 1;

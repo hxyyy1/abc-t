@@ -104,6 +104,7 @@ struct Map_ManStruct_t_
     float *             pNodeDelays;   // the array of node delays
 
     // info about the original circuit
+    char *              pFileName;     // original network file/name (not owned)
     char **             ppOutputNames; // the primary output names
     Map_Time_t *        pInputArrivals;// the PI arrival times
     Map_Time_t *        pOutputRequireds;// the PI arrival times
@@ -125,6 +126,13 @@ struct Map_ManStruct_t_
     int                 fSwitching;    // use switching activity
     int                 fSkipFanout;   // skip large gates when mapping high-fanout nodes
     int                 fUseProfile;   // use standard-cell profile
+    int                 fMctsEnable;   // enable local MCTS refinement
+    int                 fMctsEarly;    // run local MCTS after area-flow recovery
+    int                 fMctsLate;     // run local MCTS after exact-area recovery
+    int                 fMctsParallel; // enable parallel region search
+    int                 nMctsSimNum;   // simulations per region
+    int                 nMctsRegionNum;// number of hotspot regions
+    int                 nMctsRegionMax;// max nodes per region
 
     // the supergate library
     Map_SuperLib_t *    pSuperLib;     // the current supergate library
@@ -380,7 +388,10 @@ extern int               Map_NodeGetFanoutNum( Map_Node_t * pNode );
 extern Map_SuperLib_t *  Map_SuperLibCreate( Mio_Library_t * pGenlib, Vec_Str_t * vStr, char * pFileName, char * pExcludeFile, int  fAlgorithm, int  fVerbose );
 extern void              Map_SuperLibFree( Map_SuperLib_t * p );
 /*=== mapperMatch.c ===============================================================*/
+extern int               Map_MatchCompare( Map_Man_t * pMan, Map_Match_t * pM1, Map_Match_t * pM2, int fDoingArea );
 extern int               Map_MappingMatches( Map_Man_t * p );
+extern void              Map_MappingSetPiArrivalTimes( Map_Man_t * p );
+extern void              Map_NodeTransferArrivalTimes( Map_Man_t * p, Map_Node_t * pNode );
 /*=== mapperRefs.c =============================================================*/
 extern void              Map_MappingEstimateRefsInit( Map_Man_t * p );
 extern void              Map_MappingEstimateRefs( Map_Man_t * p );
@@ -418,6 +429,8 @@ extern float             Map_TimeComputeArrivalMax( Map_Man_t * p );
 extern void              Map_TimeComputeRequiredGlobal( Map_Man_t * p );
 /*=== mapperTruth.c ===============================================================*/
 extern void              Map_MappingTruths( Map_Man_t * pMan );
+/*=== mapperMcts.c ===============================================================*/
+extern int               Map_MappingMctsRefine( Map_Man_t * p );
 extern int               Map_TruthsCutDontCare( Map_Man_t * pMan, Map_Cut_t * pCut, unsigned * uTruthDc );
 extern int               Map_TruthCountOnes( unsigned * uTruth, int nLeaves );
 extern int               Map_TruthDetectTwoFirst( unsigned * uTruth, int nLeaves );

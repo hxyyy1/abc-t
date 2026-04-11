@@ -6,6 +6,7 @@ SRC +=  src/map/mapper/mapper.c \
     src/map/mapper/mapperCutUtils.c \
     src/map/mapper/mapperLib.c \
     src/map/mapper/mapperMatch.c \
+    src/map/mapper/mapperMcts.c \
     src/map/mapper/mapperRefs.c \
     src/map/mapper/mapperSuper.c \
     src/map/mapper/mapperSwitch.c \
