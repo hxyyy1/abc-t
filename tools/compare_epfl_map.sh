@@ -8,7 +8,7 @@ BENCH_PATH="${BENCH_PATH:-${2:-$ROOT_DIR/benchmarks/EPFL}}"
 OUT_DIR="${OUT_DIR:-${3:-$ROOT_DIR/results}}"
 
 CMD1="${CMD1:-map}"
-CMD2="${CMD2:-map -j -P}"
+CMD2="${CMD2:-map -j -K 24}"
 CMD1_LABEL="${CMD1_LABEL:-$CMD1}"
 CMD2_LABEL="${CMD2_LABEL:-$CMD2}"
 BENCH_GLOB="${BENCH_GLOB:-*.aig}"
